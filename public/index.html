@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Local Weather Dashboard</h1>
+            <p>Enter your zip code to get current weather conditions</p>
+        </header>
+
+        <main>
+            <form id="weatherForm">
+                <div class="form-group">
+                    <label for="zipcode">Zip Code:</label>
+                    <input 
+                        type="text" 
+                        id="zipcode" 
+                        name="zipcode" 
+                        pattern="[0-9]{5}" 
+                        placeholder="12345" 
+                        required
+                        maxlength="5"
+                        title="Please enter a 5-digit US zip code"
+                    >
+                    <button type="submit">Get Weather</button>
+                </div>
+            </form>
+
+            <div id="loading" class="loading hidden">
+                <div class="spinner"></div>
+                <p>Loading weather data...</p>
+            </div>
+
+            <div id="weatherResults" class="weather-results hidden">
+                <h2 id="locationName"></h2>
+                <div class="weather-info">
+                    <div class="temperature">
+                        <span id="temp" class="temp-value"></span>
+                        <span class="temp-unit">°F</span>
+                    </div>
+                    <div class="weather-details">
+                        <p id="description" class="description"></p>
+                        <p class="feels-like">Feels like <span id="feelsLike"></span>°F</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="errorMessage" class="error-message hidden"></div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
