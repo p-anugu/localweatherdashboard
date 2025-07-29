@@ -167,6 +167,52 @@ button:active {
     display: none;
 }
 
+/* Navigation buttons */
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 20px 0;
+}
+
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #667eea;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.1s;
+    text-align: center;
+}
+
+.nav-button:hover {
+    background: #5a67d8;
+    transform: translateY(-1px);
+}
+
+.nav-button:active {
+    transform: scale(0.98);
+}
+
+.nav-button.secondary {
+    background: #48bb78;
+}
+
+.nav-button.secondary:hover {
+    background: #38a169;
+}
+
+.nav-button.analytics {
+    background: #ed8936;
+}
+
+.nav-button.analytics:hover {
+    background: #dd6b20;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 480px) {
     .container {

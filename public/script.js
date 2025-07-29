@@ -54,6 +54,10 @@ function displayWeather(data) {
     feelsLikeElement.textContent = data.feelsLike;
     
     weatherResults.classList.remove('hidden');
+    
+    // Store weather data for impact reporting
+    sessionStorage.setItem('currentWeather', JSON.stringify(data));
+    sessionStorage.setItem('currentZipcode', zipcodeInput.value);
 }
 
 // Show loading state
